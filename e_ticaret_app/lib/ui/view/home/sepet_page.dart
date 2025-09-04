@@ -40,18 +40,8 @@ class _SepetPageState extends State<SepetPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          sepet,
-
-          style: Theme.of(
-            context,
-          ).textTheme.headlineSmall?.copyWith(fontFamily: CustomFontFamily.storyScript, color: CostumColor.red),
+        title: Text(sepet),
         ),
-        leading: IconButton(
-          onPressed: () => Navigator.of(context).pop(),
-          icon: const Icon(HugeIcons.strokeRoundedArrowLeft01),
-        ),
-      ),
       body: cartItems.isEmpty
           ? Center(child: Text(sepetB))
           : ListView.builder(
